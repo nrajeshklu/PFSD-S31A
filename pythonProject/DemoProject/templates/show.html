@@ -1,0 +1,40 @@
+{% extends 'home.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>::DisplayDetails::</title>
+</head>
+<body>
+{% block content %}
+<h2 align="center">::Users List::</h2>
+<table border="1" align="center" width="800">
+    <thead bgcolor="lightblue">
+    <tr>
+        <th>FullName</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Mobileno</th>
+        <th>Location</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+<tbody align="center">
+            {% for u in users %}
+            <tr>
+                <td> {{ u.fullname }}</td>
+               <td>{{ u.email }}</td>
+               <td> {{ u.username }}</td>
+                <td>{{ u.password }}</td>
+                <td>{{ u.mobileno }}</td>
+                <td>{{ u.location }}</td>
+                <td> <a href="/edit/{{u.pk}}">Update </a></td>
+                <td> <a href="/delete/{{u.pk}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+</table>
+{% endblock %}
+</body>
+</html>

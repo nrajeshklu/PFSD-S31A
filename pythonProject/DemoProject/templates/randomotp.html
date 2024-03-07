@@ -1,0 +1,13 @@
+{% extends 'home.html' %}
+{% block content %}
+<form method="post" action="{% url 'randomotp' %}">
+ {% csrf_token %}
+    <br>
+    <br>
+    Enter Length of OTP:<input type="text" name="rnum"><br><br>
+    <input type="submit" value="Generate">
+    <br><br><div align ='center'><h1>
+    {{ results }}</h1>
+    </div>
+</form>
+{% endblock %}

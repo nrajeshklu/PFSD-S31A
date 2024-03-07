@@ -1,0 +1,26 @@
+body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Set minimum height to full viewport height */
+            display: flex;
+            flex-direction: column;
+
+        }
+div{
+  background-color:Tomato;
+  border: 1px solid;
+  border-radius: .25rem;
+  color: blue;
+}
+h2 {
+    color: blue;
+  }
+footer {
+            background-color:Tomato;
+            color: blue;
+            padding: 0px;
+            text-align: center;
+            margin-top: auto;
+             border-radius: .25rem;
+        }
+

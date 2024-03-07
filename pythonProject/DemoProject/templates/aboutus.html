@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+<body>
+{% block content %}
+<h3 align="center"><u>Aboutus</u></h3>
+<form method="post" action="{% url 'send-email' %}" align="center">
+    {% csrf_token %}
+    Name: <input type="text" name="name"><br><br>
+    Address : <input type="text" name="address"><br><br>
+    Email: <input type="email" name="email"><br><br>
+    Mobile number: <input type="text" name="phno"><br><br>
+    <input type="submit" value="SubmitFeedback"><br><br>
+    <input type="reset" value="Clear">
+</form>
+{% endblock %}
+</body>

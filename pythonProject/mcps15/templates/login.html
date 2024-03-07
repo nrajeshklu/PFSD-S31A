@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>::LOGIN::</title>
+</head>
+<body>
+{% block b1 %}
+<form method="post" align="center">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input  type="submit" value="Validate">
+    <input type="reset" value="clear">
+</form>
+{% endblock %}
+</body>
+</html>

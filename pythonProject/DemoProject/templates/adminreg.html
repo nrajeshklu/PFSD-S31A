@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+{% load static %}
+<html lang="en">
+<body>
+{% block content %}
+<h3 align="center">Admin Login</h3>
+<form method="post" align="center">
+    {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="SUBMIT"/>
+        <input type="reset" value="RESET"/>
+</form>
+  {% endblock %}
+</body>
+</html>

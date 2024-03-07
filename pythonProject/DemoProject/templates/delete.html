@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>::DELETE::</title>
+</head>
+<body>
+{% block content %}
+<h3 align="center">Delete the Details</h3>
+<form method="POST">
+        {% csrf_token %}
+        <table style="width:50%" align="center">
+            <tr>
+                <td>FullName:</td>
+                <td><input type="text" value="{{ users.fullname }}" name="fname"></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" value="{{ users.email }}" name="email"></td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" value="{{ users.username }}" name="uname"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" value="{{ users.password }}" name="upass"></td>
+            </tr>
+            <tr>
+                <td>Mobileno:</td>
+                <td><input type="text" value="{{ users.mobileno }}" name="mno"></td>
+            </tr>
+            <tr>
+                <td>Location:</td>
+                <td><input type="text" value="{{ users.location }}" name="loc"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Delete"></td>
+            </tr>
+        </table>
+    <
+</form>
+{% endblock %}
+</body>
+</html>

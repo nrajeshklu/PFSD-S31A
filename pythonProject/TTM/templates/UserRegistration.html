@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>::Registration::</title>
+</head>
+<body align='center'>
+<h1 ><b>UserRegistration</b></h1>
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+    <table>
+        <tr><td>EnterFullname:</td><td><input type="text" name="fname" required></td></tr>
+        <tr><td>EnterEmailId:</td><td><input type="email" name="umail" required></td></tr>
+        <tr><td>EnterUsername:</td><td><input type="text" name="uname" required></td></tr>
+        <tr><td>EnterPassword:</td><td><input type="password" name="upass" required></td></tr>
+        <tr><td>EnterMobileNumber:</td><td><input type="text" name="mnum" required></td></tr>
+        <tr><td>EnterAddress:</td><td><input type="text" name="address" required></td></tr>
+        <tr><td><input type="submit" value="Register"></td><td><input type="reset" value="Clear"></td></tr>
+    </table>
+</form>
+</body>
+</html>
